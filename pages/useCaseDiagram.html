@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speech Accessibility App - Detailed Use Case Diagram</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Speech Accessibility App</h1>
+        <p>
+          A comprehensive use case diagram showing the flow of the entire
+          process
+        </p>
+      </header>
+
+      <div class="diagram-container">
+        <div class="use-case-diagram">
+          <!-- System Boundary -->
+          <div class="system-boundary">
+            <div class="system-name">Speech Accessibility App System</div>
+
+            <!-- Use Cases -->
+            <div class="use-case speech-input">Speech Input Recognition</div>
+            <div class="use-case word-selection">Manual Word Selection</div>
+            <div class="use-case speech-normalization">
+              Speech Normalization (ASR Enhancement)
+            </div>
+            <div class="use-case ai-middleware">AI-Powered Middleware</div>
+            <div class="use-case user-adaptation">User-Specific Learning</div>
+            <div class="use-case voice-customization">Voice Customization</div>
+            <div class="use-case tts-output">Smart TTS Output</div>
+
+            <!-- Connectors -->
+            <!-- User to Speech Input -->
+            <svg
+              class="connector"
+              style="
+                position: absolute;
+                top: 150px;
+                left: 100px;
+                width: 150px;
+                height: 30px;
+              "
+            >
+              <defs>
+                <marker
+                  id="arrowhead1"
+                  markerWidth="10"
+                  markerHeight="7"
+                  refX="10"
+                  refY="3.5"
+                  orient="auto"
+                >
+                  <polygon
+                    points="0 0, 10 3.5, 0 7"
+                    class="arrow-head"
+                    style="fill: #4361ee"
+                  ></polygon>
+                </marker>
+              </defs>
+              <line
+                x1="0"
+                y1="15"
+                x2="140"
+                y2="15"
+                class="arrow"
+                style="stroke: #4361ee"
+                marker-end="url(#arrowhead1)"
+              ></line>
+            </svg>
+
+            <!-- User to Word Selection -->
+            <svg
+              class="connector"
+              style="
+                position: absolute;
+                top: 100px;
+                left: 100px;
+                width: 450px;
+                height: 100px;
+              "
+            >
+              <defs>
+                <marker
+                  id="arrowhead2"
+                  markerWidth="10"
+                  markerHeight="7"
+                  refX="10"
+                  refY="3.5"
+                  orient="auto"
+                >
+                  <polygon
+                    points="0 0, 10 3.5, 0 7"
+                    class="arrow-head"
+                    style="fill: #4361ee"
+                  ></polygon>
+                </marker>
+              </defs>
+              <path
+                d="M 0,50 C 150,0 300,100 450,50"
+                class="arrow"
+                style="stroke: #4361ee"
+                marker-end="url(#arrowhead2)"
+              ></path>
+            </svg>
+
+            <!-- Speech Input to Speech Normalization -->
+            <svg
+              class="connector"
+              style="
+                position: absolute;
+                top: 190px;
+                left: 300px;
+                width: 50px;
+                height: 50px;
+              "
+            >
+              <defs>
+                <marker
+                  id="arrowhead3"
+                  markerWidth="10"
+                  markerHeight="7"
+                  refX="10"
+                  refY="3.5"
+                  orient="auto"
+                >
+                  <polygon
+                    points="0 0, 10 3.5, 0 7"
+                    class="arrow-head"
+                    style="fill: #3a0ca3"
+                  ></polygon>
+                </marker>
+              </defs>
+              <line
+                x1="0"
+                y1="0"
+                x2="40"
+                y2="40"
+                class="arrow"
+                style="stroke: #3a0ca3"
+                marker-end="url(#arrowhead3)"
+              ></line>
+            </svg>
+
+            <!-- Word Selection to AI Middleware -->
+            <svg
+              class="connector"
+              style="
+                position: absolute;
+                top: 190px;
+                left: 500px;
+                width: 100px;
+                height: 160px;
+              "
+            >
+              <defs>
+                <marker
+                  id="arrowhead4"
+                  markerWidth="10"
+                  markerHeight="7"
+                  refX="10"
+                  refY="3.5"
+                  orient="auto"
+                >
+                  <polygon
+                    points="0 0, 10 3.5, 0 7"
+                    class="arrow-head"
+                    style="fill: #7209b7"
+                  ></polygon>
+                </marker>
+              </defs>
+              <path
+                d="M 100,0 C 50,50 50,100 0,160"
+                class="arrow"
+                style="stroke: #7209b7"
+                marker-end="url(#arrowhead4)"
+              ></path>
+            </svg>
+
+            <!-- Speech Normalization to AI Middleware -->
+            <svg
+              class="connector"
+              style="
+                position: absolute;
+                top: 320px;
+                left: 380px;
+                width: 70px;
+                height: 50px;
+              "
+            >
+              <defs>
+                <marker
+                  id="arrowhead5"
+                  markerWidth="10"
+                  markerHeight="7"
+                  refX="10"
+                  refY="3.5"
+                  orient="auto"
+                >
+                  <polygon
+                    points="0 0, 10 3.5, 0 7"
+                    class="arrow-head"
+                    style="fill: #7209b7"
+                  ></polygon>
+                </marker>
+              </defs>
+              <line
+                x1="0"
+                y1="0"
+                x2="70"
+                y2="30"
+                class="arrow"
+                style="stroke: #7209b7"
+                marker-end="url(#arrowhead5)"
+              ></line>
+            </svg>
+
+            <!-- AI Middleware to User Adaptation -->
+            <svg
+              class="connector"
+              style="
+                position: absolute;
+                top: 440px;
+                left: 400px;
+                width: 70px;
+                height: 50px;
+              "
+            >
+              <defs>
+                <marker
+                  id="arrowhead6"
+                  markerWidth="10"
+                  markerHeight="7"
+                  refX="10"
+                  refY="3.5"
+                  orient="auto"
+                >
+                  <polygon
+                    points="0 0, 10 3.5, 0 7"
+                    class="arrow-head"
+                    style="fill: #9d4edd"
+                  ></polygon>
+                </marker>
+              </defs>
+              <line
+                x1="70"
+                y1="0"
+                x2="0"
+                y2="30"
+                class="arrow"
+                style="stroke: #9d4edd"
+                marker-end="url(#arrowhead6)"
+              ></line>
+            </svg>
+
+            <!-- AI Middleware to Voice Customization -->
+            <svg
+              class="connector"
+              style="
+                position: absolute;
+                top: 440px;
+                left: 530px;
+                width: 70px;
+                height: 50px;
+              "
+            >
+              <defs>
+                <marker
+                  id="arrowhead7"
+                  markerWidth="10"
+                  markerHeight="7"
+                  refX="10"
+                  refY="3.5"
+                  orient="auto"
+                >
+                  <polygon
+                    points="0 0, 10 3.5, 0 7"
+                    class="arrow-head"
+                    style="fill: #2ec4b6"
+                  ></polygon>
+                </marker>
+              </defs>
+              <line
+                x1="0"
+                y1="0"
+                x2="70"
+                y2="30"
+                class="arrow"
+                style="stroke: #2ec4b6"
+                marker-end="url(#arrowhead7)"
+              ></line>
+            </svg>
+
+            <!-- User Adaptation to TTS Output -->
+            <svg
+              class="connector"
+              style="
+                position: absolute;
+                top: 560px;
+                left: 380px;
+                width: 70px;
+                height: 50px;
+              "
+            >
+              <defs>
+                <marker
+                  id="arrowhead8"
+                  markerWidth="10"
+                  markerHeight="7"
+                  refX="10"
+                  refY="3.5"
+                  orient="auto"
+                >
+                  <polygon
+                    points="0 0, 10 3.5, 0 7"
+                    class="arrow-head"
+                    style="fill: #06d6a0"
+                  ></polygon>
+                </marker>
+              </defs>
+              <line
+                x1="0"
+                y1="0"
+                x2="70"
+                y2="30"
+                class="arrow"
+                style="stroke: #06d6a0"
+                marker-end="url(#arrowhead8)"
+              ></line>
+            </svg>
+
+            <!-- Voice Customization to TTS Output -->
+            <svg
+              class="connector"
+              style="
+                position: absolute;
+                top: 560px;
+                left: 530px;
+                width: 70px;
+                height: 50px;
+              "
+            >
+              <defs>
+                <marker
+                  id="arrowhead9"
+                  markerWidth="10"
+                  markerHeight="7"
+                  refX="10"
+                  refY="3.5"
+                  orient="auto"
+                >
+                  <polygon
+                    points="0 0, 10 3.5, 0 7"
+                    class="arrow-head"
+                    style="fill: #06d6a0"
+                  ></polygon>
+                </marker>
+              </defs>
+              <line
+                x1="70"
+                y1="0"
+                x2="0"
+                y2="30"
+                class="arrow"
+                style="stroke: #06d6a0"
+                marker-end="url(#arrowhead9)"
+              ></line>
+            </svg>
+
+            <!-- TTS Output to User -->
+            <svg
+              class="connector"
+              style="
+                position: absolute;
+                top: 635px;
+                left: 100px;
+                width: 350px;
+                height: 100px;
+              "
+            >
+              <defs>
+                <marker
+                  id="arrowhead10"
+                  markerWidth="10"
+                  markerHeight="7"
+                  refX="10"
+                  refY="3.5"
+                  orient="auto"
+                >
+                  <polygon
+                    points="0 0, 10 3.5, 0 7"
+                    class="arrow-head"
+                    style="fill: #06d6a0"
+                  ></polygon>
+                </marker>
+              </defs>
+              <path
+                d="M 350,0 C 200,50 150,100 0,50"
+                class="arrow"
+                style="stroke: #06d6a0"
+                marker-end="url(#arrowhead10)"
+              ></path>
+            </svg>
+          </div>
+
+          <!-- Actors -->
+          <div class="actor" style="top: 350px; left: 50px">
+            <div class="actor-icon user-icon"></div>
+            <div>User</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="description-section">
+        <h2>The Ideal User Journey</h2>
+        <p>
+          A step-by-step breakdown of how users interact with the Speech
+          Accessibility App
+        </p>
+
+        <div class="flow-steps">
+          <div class="step-card">
+            <h3><span class="step-number">1</span>User Opens the App</h3>
+            <p>
+              When the user opens the app, they are presented with a simple,
+              clean interface with two primary options:
+            </p>
+            <ul class="feature-list">
+              <li>
+                <strong>Select words manually</strong> from a list (for
+                non-verbal users)
+              </li>
+              <li>
+                <strong>Speak into the app</strong> (for users with unclear
+                speech)
+              </li>
+            </ul>
+            <p>
+              The interface is designed to be accessible and intuitive,
+              requiring minimal setup or configuration.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <h3>
+              <span class="step-number">2</span>User Speaks or Selects Words
+            </h3>
+            <p>Depending on the user's abilities and preferences:</p>
+            <ul class="feature-list">
+              <li>
+                If they <strong>speak</strong>, the app analyzes their speech in
+                real-time using ASR enhancement technology
+              </li>
+              <li>
+                The app suggests words or phrases based on what it understands
+              </li>
+              <li>
+                If they <strong>select words manually</strong>, the app provides
+                contextually relevant options
+              </li>
+              <li>
+                The AI middleware predicts likely next words to speed up
+                communication
+              </li>
+            </ul>
+          </div>
+
+          <div class="step-card">
+            <h3>
+              <span class="step-number">3</span>AI Learns & Improves Over Time
+            </h3>
+            <p>
+              The app employs sophisticated learning algorithms to adapt to the
+              user:
+            </p>
+            <ul class="feature-list">
+              <li>
+                Remembers how the user talks, even if their speech is unclear
+              </li>
+              <li>Builds a personalized speech model for each user</li>
+              <li>
+                Learns common phrases, word choices, and communication patterns
+              </li>
+              <li>Adapts to changes in the user's speech over time</li>
+              <li>Improves prediction accuracy with continued use</li>
+            </ul>
+          </div>
+
+          <div class="step-card">
+            <h3>
+              <span class="step-number">4</span>App Converts Text to Speech
+            </h3>
+            <p>The final step in the communication process:</p>
+            <ul class="feature-list">
+              <li>The app speaks the selected or recognized words out loud</li>
+              <li>
+                Uses Smart TTS technology to generate natural-sounding speech
+              </li>
+              <li>
+                Speech output sounds like the user's own voice (after AI
+                training)
+              </li>
+              <li>
+                Maintains the user's identity through personalized voice
+                characteristics
+              </li>
+              <li>
+                Delivers real-time, fluid communication in social settings
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="description-section">
+        <h2>Core Technology Components</h2>
+        <p>
+          The three key technological pillars that power the Speech
+          Accessibility App
+        </p>
+
+        <div class="feature-grid">
+          <div class="feature-card speech-norm">
+            <div class="feature-icon mic-icon"></div>
+            <h3>Speech Normalization (ASR Enhancement)</h3>
+            <p>
+              Advanced speech recognition technology specifically designed for
+              users with speech impairments:
+            </p>
+            <ul class="feature-list">
+              <li>Processes unclear or atypical speech patterns</li>
+              <li>Filters out background noise and speech artifacts</li>
+              <li>Adapts to individual speech characteristics</li>
+              <li>Improves recognition accuracy over time</li>
+              <li>Works with various speech disorders and conditions</li>
+              <li>Provides real-time feedback and suggestions</li>
+            </ul>
+          </div>
+
+          <div class="feature-card ai-mid">
+            <div class="feature-icon brain-icon"></div>
+            <h3>AI-Powered Middleware</h3>
+            <p>
+              Intelligent prediction and processing system that bridges input
+              and output:
+            </p>
+            <ul class="feature-list">
+              <li>Suggests words and phrases based on context</li>
+              <li>Learns from user selections and corrections</li>
+              <li>Predicts likely next words to speed up communication</li>
+              <li>Understands user's common topics and vocabulary</li>
+              <li>Adapts to different communication scenarios</li>
+              <li>Provides contextually relevant options</li>
+              <li>Reduces the cognitive load on users</li>
+            </ul>
+          </div>
+
+          <div class="feature-card smart-tts">
+            <div class="feature-icon speaker-icon"></div>
+            <h3>Smart TTS (Speech Output)</h3>
+            <p>
+              Advanced text-to-speech technology that preserves the user's
+              identity:
+            </p>
+            <ul class="feature-list">
+              <li>Generates natural-sounding speech from text</li>
+              <li>
+                Creates a personalized voice model based on the user's speech
+              </li>
+              <li>Maintains the user's vocal identity and characteristics</li>
+              <li>
+                Adjusts tone, pitch, and emphasis for natural communication
+              </li>
+              <li>Supports multiple languages and accents</li>
+              <li>
+                Provides real-time, fluid communication in social settings
+              </li>
+              <li>
+                Allows users to "speak" even when they cannot physically do so
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="description-section">
+        <h2>Key Benefits & Advantages</h2>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>Fast & Easy</h3>
+            <ul class="feature-list">
+              <li>No complicated settings or configurations</li>
+              <li>Intuitive interface for all users</li>
+              <li>Works immediately with minimal training</li>
+              <li>Accessible to users with varying technical abilities</li>
+              <li>Quick setup and onboarding process</li>
+            </ul>
+          </div>
+
+          <div class="feature-card">
+            <h3>Adapts Over Time</h3>
+            <ul class="feature-list">
+              <li>The more the user interacts, the better it gets</li>
+              <li>Continuously improves speech recognition accuracy</li>
+              <li>Learns user's vocabulary and communication style</li>
+              <li>Adapts to changes in the user's speech patterns</li>
+              <li>Provides increasingly personalized suggestions</li>
+            </ul>
+          </div>
+
+          <div class="feature-card">
+            <h3>Feels Natural</h3>
+            <ul class="feature-list">
+              <li>AI ensures output is personalized and human-like</li>
+              <li>Preserves the user's vocal identity</li>
+              <li>Reduces the "assistive technology" feeling</li>
+              <li>Natural-sounding speech output</li>
+              <li>Maintains the user's personality in communication</li>
+              <li>Seamless integration into everyday conversations</li>
+            </ul>
+          </div>
+
+          <div class="feature-card">
+            <h3>Works in Real Life</h3>
+            <ul class="feature-list">
+              <li>Effective in various social and professional settings</li>
+              <li>Handles background noise and distractions</li>
+              <li>Supports both brief exchanges and extended conversations</li>
+              <li>Works offline for essential functionality</li>
+              <li>Adapts to different communication contexts</li>
+              <li>
+                Enables participation in meetings, social events, and daily
+                interactions
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>Speech Accessibility App - Detailed Use Case Diagram &copy; 2025</p>
+      </footer>
+    </div>
+  </body>
+</html>
